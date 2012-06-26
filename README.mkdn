@@ -1,0 +1,36 @@
+Summary
+-------
+
+Build and verify Android with the Linaro Toolchain to comply with the specification Platform/Android/Specs/LinaroAndroidToolchain
+https://wiki.linaro.org/Platform/Android/Specs/LinaroAndroidToolchain
+
+
+Use Linaro Toolchain Builder
+----------------------------
+Fetch the source code 
+
+    $ mkdir -p linaro-toolchain && cd linaro-toolchain
+    $ repo init -u git://github.com/ax-linaro/manifest.git -b master
+
+Once setup is complete, fetch projects by 'repo' (Use -jX to parallel fetch) 
+
+    $ repo sync -jX
+
+Configure and build toolchain 
+
+    $ cd build
+    $ ./linaro-build.sh --with-gcc=gcc-linaro-4.6-2012.01
+    Use 64-bit Build Enviorment
+    checking build system type... x86_64-pc-linux-gnu
+    checking host system type... x86_64-pc-linux-gnu
+    checking target system type... arm-linux-androideabi
+    checking for Canadian cross... no
+    checking target binutils version to build... 2.22
+    checking target gold binutils version to build... 2.22
+    checking target gcc version to build... linaro-4.6-2012.01
+    checking gmp version... 5.0.2
+    checking mpfr version... 3.1.0
+
+
+
+The build script will detect 32-bit or 64-bit building environment automatically. 

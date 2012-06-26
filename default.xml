@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+   <remote fetch="git://android.git.linaro.org/" name="linaro-android" review="review.android.git.linaro.org"/>
+   <remote fetch="git://git.linaro.org/" name="linaro-other"/>
+   <remote fetch="git://github.com/" name="github"/> 
+
+   <default remote="linaro-android" revision="linaro-master" sync-j="4"/>
+
+   <project path="benchmark" name="ax-linaro/benchmark" remote="github" revision="c7949005d4283c0be18307ffb8410780e9a4a0c3"/>
+   <project path="binutils" name="ax-linaro/binutils" remote="github" revision="e07c2a9a8e811c36f0cd9aea444e7eee33ddc3f7"/>
+   <project path="build" name="ax-linaro/build" remote="github" revision="3877144d22d03cfc34aadf37490c3328064941ed"/>
+   <project path="gcc" name="ax-linaro/gcc" remote="github" revision="2e507136d933c8c153843595f7393ee1ce59c7e6"/>
+   <project path="gcc-patches" name="ax-linaro/gcc-patches" remote="github" revision="a83f24b1fdd4a6ee3cd4842427aadb1a01e5a9d6"/>
+   <project path="gdb" name="ax-linaro/gdb" remote="github" revision="10a46fcd6c7f90e9bac1d04870a565532f5cc376"/>
+   <project path="gmp" name="ax-linaro/gmp" remote="github" revision="6a6e46bd27d68303fd0c01dead05367b16f759bc"/>
+   <project path="mpc" name="ax-linaro/mpc" remote="github" revision="1f8818bf62d4c3becd4eebf13ffa52d4393a3eff"/>
+   <project path="mpfr" name="ax-linaro/mpfr" remote="github" revision="3c1a28445c0d3b8a6c8a944536a57614c8483268"/>
+   <project path="ppl" name="ax-linaro/ppl" remote="github" revision="bfecf59a82ac79afc612f6240b1d06141cffc2cc"/>
+   <project path="cloog" name="ax-linaro/cloog" remote="github" revision="8de5bce041f5be8421bb4019a65192f70cfe8a6b"/>
+
+   <!-- Bionic and the minimal parts of the Android build system needed to build it - needed for libgomp and friends -->
+   <project path="android/build" name="platform/build" revision="linaro_android_4.0.4">
+     <copyfile dest="android/Makefile" src="core/root.mk"/>
+   </project>
+   <project name="device/common" path="android/device/common" revision="master"/>
+   <project name="device/linaro/common" path="android/device/linaro/common" revision="linaro_android_4.0.4"/>
+   <project name="device/linaro/pandaboard" path="android/device/linaro/pandaboard" revision="linaro_android_4.0.4"/>
+   <project name="platform/frameworks/base" path="android/frameworks/base" revision="linaro_android_4.0.4"/>
+   <project name="platform/external/elfutils" path="android/external/elfutils" revision="refs/tags/android-4.0.4_r1.1"/>
+   <project name="platform/external/svox" path="android/external/svox" revision="refs/tags/android-4.0.4_r1.1"/>
+   <project name="platform/system/core" path="android/system/core" revision="linaro_android_4.0.4"/>
+   <project path="android/bionic" name="platform/bionic" revision="linaro_android_4.0.4"/>
+</manifest>
