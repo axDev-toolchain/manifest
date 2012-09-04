@@ -23,7 +23,7 @@
      <copyfile dest="android/Makefile" src="core/root.mk"/>
    </project>
    <project name="device/common" path="android/device/common" revision="master"/>
-   <project name="device/linaro/common" path="android/device/linaro/common" revision="linaro_android_4.0.4"/>
+   <project name="device/linaro/common" path="android/device/linaro/common" revision="linaro-ics"/>
    <project name="device/linaro/pandaboard" path="android/device/linaro/pandaboard" revision="linaro_android_4.0.4"/>
    <project name="platform/frameworks/base" path="android/frameworks/base" revision="linaro_android_4.0.4"/>
    <project name="platform/external/elfutils" path="android/external/elfutils" revision="refs/tags/android-4.0.4_r1.1"/>
