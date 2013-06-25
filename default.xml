@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+   <remote fetch="git://android.git.linaro.org/" name="linaro-android" review="review.android.git.linaro.org"/>
+   <remote fetch="git://git.linaro.org/" name="linaro-other"/>
+   <remote fetch="git://github.com/" name="gh"/>
+
+   <default remote="linaro-android" revision="linaro-master" sync-j="4" sync-c="true" />
+
+   <project path="benchmark" name="toolchain/benchmark" revision="master" />
+   <project path="binutils/binutils-current" name="toolchain/binutils-current" revision="linaro-2.23.52.0.2" />
+   <project path="build" name="axDev-toolchain/build" remote="gh" revision="linaro-staging" />
+   <project path="gcc/gcc-4.8" name="axDev-toolchain/gcc-4.8" remote="gh" revision="linaro-staging" />
+   <project path="gcc-patches" name="toolchain/gcc-patches" revision="master" />
+   <project path="gdb/gdb-current" name="toolchain/gdb-current" revision="linaro-7.5-2012.12-1" />
+   <project path="gmp/gmp-current" name="toolchain/gmp-current" revision="linaro-5.1.1" />
+   <project path="mpc/mpc-current" name="toolchain/mpc-current" revision="linaro-1.0.1" />
+   <project path="mpfr/mpfr-current" name="toolchain/mpfr-current" revision="linaro-3.1.2" />
+   <project path="ppl" name="toolchain/ppl" revision="linaro-master" />
+   <project path="cloog/cloog-current" name="toolchain/cloog-current" revision="linaro-0.18.0" />
+
+   <!-- Bionic and the minimal parts of the Android build system needed to build it - needed for libgomp and friends -->
+   <project path="android/build" name="platform/build" revision="linaro_android_4.1.2">
+     <copyfile dest="android/Makefile" src="core/root.mk"/>
+   </project>
+   <project name="device/common" path="android/device/common" revision="master"/>
+   <project name="device/linaro/common" path="android/device/linaro/common" revision="linaro-ics"/>
+   <project name="device/linaro/pandaboard" path="android/device/linaro/pandaboard" revision="linaro-jb"/>
+   <project name="platform/hardware/ti/omap4xxx" path="android/hardware/ti/omap4xxx" revision="linaro_android_4.1.2"/>
+   <project name="platform/frameworks/base" path="android/frameworks/base" revision="linaro_android_4.1.2"/>
+   <project name="platform/frameworks/native" path="android/frameworks/native" revision="linaro_android_4.1.2"/>
+   <project name="platform/external/elfutils" path="android/external/elfutils" revision="linaro_android_4.1.2"/>
+   <project name="platform/external/svox" path="android/external/svox" revision="refs/tags/android-4.1.2_r1"/>
+   <project name="platform/system/core" path="android/system/core" revision="linaro_android_4.1.2" />
+   <project path="android/bionic" name="platform/bionic" revision="linaro_android_4.1.2" />
+</manifest>
