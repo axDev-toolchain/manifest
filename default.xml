@@ -3,14 +3,15 @@
    <remote fetch="git://android.git.linaro.org/" name="linaro-android" review="review.android.git.linaro.org"/>
    <remote fetch="git://git.linaro.org/" name="linaro-other"/>
    <remote fetch="git://github.com/" name="gh"/>
+   <remote fetch="git://gcc.gnu.org/git/" name="fsf-gcc" />
 
    <default remote="linaro-android" revision="linaro-master" sync-j="4" sync-c="true" />
 
    <project path="benchmark" name="toolchain/benchmark" revision="master" />
    <project path="binutils/binutils-current" name="toolchain/binutils-current" revision="linaro-2.23.52.0.2" />
    <project path="build" name="axDev-toolchain/build" remote="gh" revision="linaro-staging" />
-   <project path="gcc/gcc-4.8" name="axDev-toolchain/gcc-4.8" remote="gh" revision="linaro-staging" />
-   <project path="gcc-patches" name="toolchain/gcc-patches" revision="master" />
+   <project path="gcc/gcc-4.9" name="gcc" remote="fsf-gcc" revision="trunk" />
+   <project path="gcc-patches" name="axDev-toolchain/gcc-patches" revision="linaro-staging" />
    <project path="gdb/gdb-current" name="toolchain/gdb-current" revision="linaro-7.5-2012.12-1" />
    <project path="gmp/gmp-current" name="toolchain/gmp-current" revision="linaro-5.1.1" />
    <project path="mpc/mpc-current" name="toolchain/mpc-current" revision="linaro-1.0.1" />

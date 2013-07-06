@@ -10,7 +10,7 @@ Use Linaro Toolchain Builder
 Fetch the source code 
 
     $ mkdir -p linaro-toolchain && cd linaro-toolchain
-    $ repo init -u git://github.com/axDev-toolchain/manifest.git -b linaro-staging
+    $ repo init -u git://github.com/axDev-toolchain/manifest.git -b linaro-gcc-trunk
 
 Once setup is complete, fetch projects by 'repo' (Use -jX to parallel fetch) 
 
@@ -19,18 +19,18 @@ Once setup is complete, fetch projects by 'repo' (Use -jX to parallel fetch)
 Configure and build toolchain 
 
     $ cd build
-    $ ./linaro-build.sh --with-gcc=gcc-4.8
+    $ ./linaro-build.sh --with-gcc=gcc-4.9
     Use 64-bit Build Enviorment
     checking build system type... x86_64-pc-linux-gnu
     checking host system type... x86_64-pc-linux-gnu
     checking target system type... arm-unknown-linux-androideabi
     checking target binutils version to build... current
     checking target gold binutils version to build... current
-    checking target gcc version to build... 4.8
-    checking gcc version based on version file ./../gcc/gcc-4.8/gcc/BASE-VER... 4 . 8
+    checking target gcc version to build... 4.9
+    checking gcc version based on version file ./../gcc/gcc-4.9/gcc/BASE-VER... 4 . 9
     checking if gcc is at least 4.3.0... yes
-    checking if gcc 4 . 8 is at least 4.5.0... yes
-    checking if gcc 4 . 8 is at least 4.6.0... yes
+    checking if gcc 4 . 9 is at least 4.5.0... yes
+    checking if gcc 4 . 9 is at least 4.6.0... yes
     checking gmp version... current
     checking mpfr version... current
     checking mpc version... current
