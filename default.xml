@@ -2,33 +2,35 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
+  <remote  name="gh"
+           fetch="git://github.com/" />
   <default revision="master"
            remote="aosp"
            sync-j="4" />
 
   <project path="avr-libc" name="toolchain/avr-libc" />
   <project path="benchmark" name="toolchain/benchmark" />
-  <project path="binutils" name="toolchain/binutils" />
-  <project path="build" name="toolchain/build" />
+  <project path="binutils" name="axDev-toolchain/binutils-upstream" remote="gh" revision="aosp-staging" />
+  <project path="build" name="axDev-toolchain/build" remote="gh" revision="aosp-staging" />
   <project path="ccache" name="toolchain/ccache" />
-  <project path="clang" name="toolchain/clang" />
+  <project path="clang" name="toolchain/clang" revision="release_33" />
   <project path="cloog" name="toolchain/cloog" />
   <project path="compiler-rt" name="toolchain/compiler-rt" />
   <project path="expat" name="toolchain/expat" />
-  <project path="gcc" name="toolchain/gcc" />
+  <project path="gcc/gcc-4.8" name="axDev-toolchain/gcc-4.8" remote="gh" revision="gcc-4_8-branch" />
   <project path="gdb" name="toolchain/gdb" />
-  <project path="gmp" name="toolchain/gmp" />
+  <project path="gmp" name="axDev-toolchain/gmp" remote="gh" revision="aosp-staging" />
   <project path="gold" name="toolchain/gold" />
-  <project path="isl" name="toolchain/isl" />
-  <project path="llvm" name="toolchain/llvm" />
+  <project path="isl" name="axDev-toolchain/isl" remote="gh" revision="aosp-staging" />
+  <project path="llvm" name="toolchain/llvm" revision="release_33" />
   <project path="mclinker" name="toolchain/mclinker" />
   <project path="mpc" name="toolchain/mpc" />
-  <project path="mpfr" name="toolchain/mpfr" />
+  <project path="mpfr" name="axDev-toolchain/mpfr" remote="gh" revision="aosp-staging" />
   <project path="perl" name="toolchain/perl" />
   <project path="polly" name="toolchain/polly" />
-  <project path="ppl" name="toolchain/ppl" />
+  <project path="ppl" name="axDev-toolchain/ppl" remote="gh" revision="aosp-staging" />
   <project path="python" name="toolchain/python" />
   <project path="valgrind" name="toolchain/valgrind" />
 

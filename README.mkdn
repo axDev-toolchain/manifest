@@ -1,0 +1,31 @@
+Use AOSP Toolchain Builder
+----------------------------
+Fetch the source code
+
+    $ mkdir -p aosp-toolchain && cd aosp-toolchain
+    $ repo init -u git://github.com/axDev-toolchain/manifest.git -b aosp-staging
+
+Once setup is complete, fetch projects by 'repo' (Use -jX to parallel fetch)
+
+    $ repo sync -jX
+
+Configure and build toolchain
+
+    $ cd build
+    $ ./build.sh
+    checking build system type... x86_64-unknown-linux-gnu
+    checking host system type... x86_64-unknown-linux-gnu
+    checking target system type... arm-unknown-linux-androideabi
+    checking for a BSD-compatible install... /usr/bin/install -c
+    checking target binutils version to build... upstream
+    checking target gold binutils version to build... upstream
+    checking target gcc version to build... 4.8
+    checking gmp version... 5.1.2
+    checking mpfr version... 3.1.2
+    checking mpc version... 1.0.1
+    checking ppl version... 1.0.x
+    checking cloog version... 0.18.0
+    checking isl version... 0.12.1
+    checking target gdb version to build... 7.6
+    checking expat version... 2.0.1
+
