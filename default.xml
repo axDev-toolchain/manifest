@@ -12,7 +12,7 @@
 
   <project path="avr-libc" name="toolchain/avr-libc" />
   <project path="benchmark" name="toolchain/benchmark" />
-  <project path="binutils" name="axDev-toolchain/binutils-upstream" remote="gh" revision="aosp-staging" />
+  <project path="binutils/binutils-upstream" name="axDev-toolchain/binutils-upstream" remote="gh" revision="aosp-staging" />
   <project path="build" name="axDev-toolchain/build" remote="gh" revision="aosp-staging" />
   <project path="ccache" name="toolchain/ccache" />
   <project path="clang" name="toolchain/clang" revision="release_33" />
