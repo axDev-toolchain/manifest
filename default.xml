@@ -20,6 +20,7 @@
   <project path="compiler-rt" name="toolchain/compiler-rt" />
   <project path="expat" name="toolchain/expat" />
   <project path="gcc/gcc-4.8" name="axDev-toolchain/gcc-4.8" remote="gh" revision="gcc-4_8-branch" />
+  <project path="gcc-patches" name="axDev-toolchain/gcc-patches" remote="gh" revision="aosp-staging" />
   <project path="gdb" name="toolchain/gdb" />
   <project path="gmp" name="axDev-toolchain/gmp" remote="gh" revision="aosp-staging" />
   <project path="gold" name="toolchain/gold" />
